@@ -1,3 +1,9 @@
+#if you don't want to use this code in functions.php you must need to do..  ( global $wp_filter; )
+
+
+
+
+
 // write the php code in functions php for remove field form checkout form.
 
 <?php
