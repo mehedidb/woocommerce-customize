@@ -29,3 +29,31 @@ function wps_add_extra_product_thumbs() {
 	}
 
 }
+
+
+
+//* or you can use the code.
+add_action('woocommerce_shop_loop_item_title','wps_add_extra_product_thumbs', 5);
+function wps_add_extra_product_thumbs() {
+
+	if ( is_shop() ) {
+
+		global $product;
+
+		$attachment_ids = $product->get_gallery_attachment_ids(); ?>
+
+		<div class="product-thumbs">
+
+		<?php foreach( $attachment_ids as $attachment_id ) :
+
+		  	$thumbnail_url = wp_get_attachment_image_src( $attachment_id,'default' ); ?>
+		  	<img class="thumb" src="<?php echo $thumbnail_url[0]; ?>">
+
+		<?php endforeach; ?>
+
+		</div>
+
+		<?php	
+	}
+
+}
