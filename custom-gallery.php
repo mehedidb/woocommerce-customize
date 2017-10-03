@@ -3,7 +3,7 @@
 
 
 
-//* Add gallery thumbs to woocommerce shop page
+//* Add gallery thumbs to woocommerce shop page refference https://www.wpstud.io/product-gallery-images-shop-page/
 <?php
 add_action('woocommerce_shop_loop_item_title','wps_add_extra_product_thumbs', 5);
 function wps_add_extra_product_thumbs() {
